@@ -7,43 +7,49 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>QuickTodo</h1>
-    </header>
+  <div class="app">
 
-    <!-- カテゴリータブ -->
-    <div class="category-bar">
-      <div id="category-tabs" class="category-tabs"></div>
-      <button id="add-category-btn" class="btn-add-category" title="カテゴリーを追加">+</button>
-    </div>
+    <!-- 左サイドバー -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="app-name">QuickTodo</span>
+      </div>
 
-    <!-- カテゴリー追加フォーム（通常は非表示） -->
-    <div id="category-form" class="category-form hidden">
-      <input type="text" id="category-input" placeholder="カテゴリー名を入力..." maxlength="20">
-      <button id="category-submit" class="btn-category-submit">追加</button>
-      <button id="category-cancel" class="btn-category-cancel">×</button>
-    </div>
+      <nav class="category-tree" id="category-tree"></nav>
 
-    <div class="input-area">
-      <input
-        type="text"
-        id="task-input"
-        placeholder="タスクを入力してEnter..."
-        maxlength="100"
-        autofocus
-      >
-    </div>
+      <button class="btn-add-root-cat" id="btn-add-root-cat">
+        <span class="icon">+</span>
+        <span>カテゴリーを追加</span>
+      </button>
+    </aside>
 
-    <div id="task-list" class="task-list"></div>
+    <!-- メインコンテンツ -->
+    <main class="main">
+      <div class="main-header">
+        <h2 class="current-category-name" id="current-category-name">すべて</h2>
+        <span class="shortcut-hint">Alt+Shift+D</span>
+      </div>
 
-    <div id="empty-state" class="empty-state">
-      <p>タスクなし</p>
-    </div>
+      <div class="input-area">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="タスクを追加..."
+          maxlength="100"
+          autofocus
+        >
+      </div>
 
-    <footer>
-      <button id="clear-completed" class="btn-clear">完了済みを削除</button>
-    </footer>
+      <div id="task-list" class="task-list"></div>
+
+      <div id="empty-state" class="empty-state">
+        <p>タスクなし</p>
+      </div>
+
+      <footer>
+        <button id="clear-completed" class="btn-clear">完了済みを削除</button>
+      </footer>
+    </main>
   </div>
 
   <script src="popup.js"></script>
