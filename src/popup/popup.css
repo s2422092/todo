@@ -43,6 +43,153 @@ header h1 {
   white-space: nowrap;
 }
 
+/* Category bar */
+.category-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-bottom: 1px solid #dadce0;
+  background: #ffffff;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.category-tabs::-webkit-scrollbar { display: none; }
+
+.category-tab {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid #dadce0;
+  font-size: 12px;
+  color: #5f6368;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.category-tab:hover {
+  background: #f1f3f4;
+  border-color: #bdc1c6;
+}
+
+.category-tab.active {
+  background: #e8f0fe;
+  border-color: #1a73e8;
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+.category-tab-delete {
+  background: none;
+  border: none;
+  color: #9aa0a6;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+
+.category-tab-delete:hover { color: #ea4335; }
+
+.btn-add-category {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background: none;
+  border: 1px dashed #dadce0;
+  border-radius: 50%;
+  color: #9aa0a6;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.btn-add-category:hover {
+  border-color: #1a73e8;
+  color: #1a73e8;
+  background: #e8f0fe;
+}
+
+/* Category add form */
+.category-form {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-bottom: 1px solid #dadce0;
+  background: #f8f9fa;
+}
+
+.category-form.hidden { display: none; }
+
+#category-input {
+  flex: 1;
+  padding: 5px 10px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: inherit;
+  outline: none;
+  background: #fff;
+}
+
+#category-input:focus { border-color: #1a73e8; }
+
+.btn-category-submit {
+  padding: 5px 10px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-category-submit:hover { background: #1557b0; }
+
+.btn-category-cancel {
+  background: none;
+  border: none;
+  color: #9aa0a6;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 2px;
+}
+
+.btn-category-cancel:hover { color: #ea4335; }
+
+/* Category badge on task (in "all" view) */
+.category-badge {
+  font-size: 10px;
+  font-weight: 500;
+  color: #5f6368;
+  background: #f1f3f4;
+  padding: 1px 6px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  border: 1px solid #dadce0;
+}
+
 /* Input */
 .input-area {
   padding: 10px 12px;

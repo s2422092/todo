@@ -12,6 +12,19 @@
       <h1>QuickTodo</h1>
     </header>
 
+    <!-- カテゴリータブ -->
+    <div class="category-bar">
+      <div id="category-tabs" class="category-tabs"></div>
+      <button id="add-category-btn" class="btn-add-category" title="カテゴリーを追加">+</button>
+    </div>
+
+    <!-- カテゴリー追加フォーム（通常は非表示） -->
+    <div id="category-form" class="category-form hidden">
+      <input type="text" id="category-input" placeholder="カテゴリー名を入力..." maxlength="20">
+      <button id="category-submit" class="btn-category-submit">追加</button>
+      <button id="category-cancel" class="btn-category-cancel">×</button>
+    </div>
+
     <div class="input-area">
       <input
         type="text"
