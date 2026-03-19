@@ -114,6 +114,38 @@ header h1 {
   color: #80868b;
 }
 
+/* Drag handle */
+.drag-handle {
+  flex-shrink: 0;
+  color: #dadce0;
+  font-size: 11px;
+  letter-spacing: -2px;
+  cursor: grab;
+  padding: 0 2px;
+  user-select: none;
+  transition: color 0.15s;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.drag-handle.hidden {
+  visibility: hidden;
+}
+
+.task-item:hover .drag-handle {
+  color: #9aa0a6;
+}
+
+.task-item.dragging {
+  opacity: 0.4;
+}
+
+.task-item.drag-over {
+  border-top: 2px solid #1a73e8;
+}
+
 /* Checkbox */
 .task-check {
   width: 16px;
