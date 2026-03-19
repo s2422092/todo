@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickTodo - Privacy Policy / プライバシーポリシー</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background: #f8f9fa;
+      color: #202124;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a73e8;
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 15px;
+      opacity: 0.85;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .lang-btn {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .lang-btn.active,
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.35);
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .updated {
+      font-size: 13px;
+      color: #80868b;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #dadce0;
+    }
+
+    section {
+      background: white;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      border: 1px solid #dadce0;
+    }
+
+    h2 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a73e8;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: #1a73e8;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 14px;
+      color: #3c4043;
+      margin-bottom: 10px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    li {
+      font-size: 14px;
+      color: #3c4043;
+      margin-bottom: 6px;
+    }
+
+    .no-collect {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #e6f4ea;
+      border: 1px solid #b7dfbb;
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin-top: 12px;
+    }
+
+    .no-collect-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .no-collect p {
+      margin: 0;
+      font-size: 14px;
+      color: #1e7e34;
+      font-weight: 500;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    th {
+      text-align: left;
+      padding: 8px 12px;
+      background: #f1f3f4;
+      color: #5f6368;
+      font-weight: 500;
+      border-bottom: 1px solid #dadce0;
+    }
+
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #f1f3f4;
+      color: #3c4043;
+      vertical-align: top;
+    }
+
+    td:first-child {
+      font-weight: 500;
+      color: #202124;
+      white-space: nowrap;
+    }
+
+    code {
+      background: #f1f3f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: 'SFMono-Regular', Consolas, monospace;
+      color: #c7254e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: #9aa0a6;
+    }
+
+    /* Language sections */
+    .lang-ja, .lang-en { display: none; }
+    .lang-ja.active, .lang-en.active { display: block; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>QuickTodo</h1>
+  <p>Privacy Policy / プライバシーポリシー</p>
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="switchLang('ja')">日本語</button>
+    <button class="lang-btn" onclick="switchLang('en')">English</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- 日本語 -->
+  <div class="lang-ja active">
+    <p class="updated">最終更新日: 2026年3月20日</p>
+
+    <section>
+      <h2>概要</h2>
+      <p>QuickTodo は、タスク管理を補助する Chrome 拡張機能です。本ポリシーでは、拡張機能がどのようなデータにアクセスし、どのように取り扱うかを説明します。</p>
+      <div class="no-collect">
+        <span class="no-collect-icon">&#10003;</span>
+        <p>QuickTodo は、いかなる個人データも収集・送信・共有しません。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>収集するデータ</h2>
+      <p>QuickTodo は以下のデータを一切収集しません。</p>
+      <ul>
+        <li>タスクのデータはすべて、ブラウザの <code>chrome.storage.local</code> にのみ保存されます。</li>
+        <li>外部サーバーへのデータ送信は行いません。</li>
+        <li>アクセス解析・トラッキング・テレメトリは一切使用しません。</li>
+        <li>アカウント登録やサインインは不要です。</li>
+        <li>訪問したページのコンテンツを読み取ることはありません。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>権限の説明</h2>
+      <table>
+        <tr>
+          <th>権限</th>
+          <th>使用目的</th>
+        </tr>
+        <tr>
+          <td><code>storage</code></td>
+          <td>タスクをデバイス上にローカル保存するために使用します。</td>
+        </tr>
+        <tr>
+          <td><code>commands</code></td>
+          <td>キーボードショートカット（Alt+Shift+D）を登録するために使用します。</td>
+        </tr>
+        <tr>
+          <td><code>host_permissions</code><br>（&lt;all_urls&gt;）</td>
+          <td>すべてのページ下部にタスクバーを表示するため、コンテンツスクリプトを注入します。訪問先のページのコンテンツを読み取ったり、送信したりすることはありません。</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>データの保存</h2>
+      <p>タスクは <code>chrome.storage.local</code> に保存されます。これはブラウザ内のローカルストレージであり、外部に送信されることはありません。Chrome Sync やクラウドサービスとの同期も行いません。</p>
+      <p>拡張機能をアンインストールすると、保存されたすべてのデータは完全に削除されます。</p>
+    </section>
+
+    <section>
+      <h2>第三者サービス</h2>
+      <p>QuickTodo は、いかなる第三者のサービス・API・ライブラリも使用していません。</p>
+    </section>
+
+    <section>
+      <h2>ポリシーの変更</h2>
+      <p>本ポリシーを改訂した場合は、このページに最新版を掲載し、更新日を変更します。</p>
+    </section>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <p>本プライバシーポリシーに関するご質問は、Chrome Web Store の拡張機能サポートページからお問い合わせください。</p>
+    </section>
+  </div>
+
+  <!-- English -->
+  <div class="lang-en">
+    <p class="updated">Last updated: March 20, 2026</p>
+
+    <section>
+      <h2>Overview</h2>
+      <p>QuickTodo is a Chrome extension that helps you manage tasks. This policy explains what data the extension accesses and how it is handled.</p>
+      <div class="no-collect">
+        <span class="no-collect-icon">&#10003;</span>
+        <p>QuickTodo does not collect, transmit, or share any personal data.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Data We Collect</h2>
+      <p>QuickTodo does not collect any of the following:</p>
+      <ul>
+        <li>All task data is stored exclusively in your browser using <code>chrome.storage.local</code>.</li>
+        <li>No data is ever sent to any external server.</li>
+        <li>No analytics, tracking, or telemetry of any kind is used.</li>
+        <li>No account or sign-in is required.</li>
+        <li>The extension does not read the content of any pages you visit.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Permissions Explained</h2>
+      <table>
+        <tr>
+          <th>Permission</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td><code>storage</code></td>
+          <td>Used to save your tasks locally on your device.</td>
+        </tr>
+        <tr>
+          <td><code>commands</code></td>
+          <td>Used to register the keyboard shortcut (Alt+Shift+D) for completing the top task.</td>
+        </tr>
+        <tr>
+          <td><code>host_permissions</code><br>(&lt;all_urls&gt;)</td>
+          <td>Required to inject a content script that displays the task bar at the bottom of every webpage. The extension does not read, collect, or transmit any content from visited pages.</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Data Storage</h2>
+      <p>Tasks are stored in <code>chrome.storage.local</code>, which is a browser-local storage mechanism. Data is never synced to Chrome Sync or any cloud service.</p>
+      <p>Uninstalling the extension will permanently delete all stored task data.</p>
+    </section>
+
+    <section>
+      <h2>Third Parties</h2>
+      <p>QuickTodo does not use any third-party services, APIs, or libraries.</p>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>If this policy is updated, the new version will be published on this page with an updated date.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>If you have any questions about this privacy policy, please reach out via the extension's support page on the Chrome Web Store.</p>
+    </section>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 QuickTodo. All rights reserved.
+</footer>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-ja, .lang-en').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.querySelector('.lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
