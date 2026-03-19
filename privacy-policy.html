@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickTodo - Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      max-width: 720px;
+      margin: 48px auto;
+      padding: 0 24px;
+      color: #202124;
+      line-height: 1.7;
+    }
+    h1 { font-size: 24px; margin-bottom: 8px; }
+    h2 { font-size: 16px; margin-top: 32px; color: #1a73e8; }
+    p, li { font-size: 14px; color: #3c4043; }
+    .updated { font-size: 13px; color: #80868b; margin-bottom: 32px; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: March 2025</p>
+
+  <h2>Overview</h2>
+  <p>
+    QuickTodo is a Chrome extension that helps you manage tasks. We are committed to protecting your privacy.
+    This policy explains what data the extension accesses and how it is handled.
+  </p>
+
+  <h2>Data We Collect</h2>
+  <p>QuickTodo does <strong>not</strong> collect, transmit, or share any personal data. Specifically:</p>
+  <ul>
+    <li>All task data is stored exclusively in your browser using <code>chrome.storage.local</code>.</li>
+    <li>No data is ever sent to any external server.</li>
+    <li>No analytics, tracking, or telemetry of any kind is used.</li>
+    <li>No account or sign-in is required.</li>
+  </ul>
+
+  <h2>Permissions Explained</h2>
+  <ul>
+    <li><strong>storage</strong> — Used to save your tasks locally on your device.</li>
+    <li><strong>commands</strong> — Used to register the keyboard shortcut (Alt+Shift+D) for completing the top task.</li>
+    <li><strong>host_permissions (&lt;all_urls&gt;)</strong> — Required to display the top-priority task bar at the bottom of every webpage. The extension only reads your locally stored task data to render this bar. It does not read, modify, or transmit any content from the pages you visit.</li>
+  </ul>
+
+  <h2>Data Storage</h2>
+  <p>
+    Tasks are stored in <code>chrome.storage.local</code>, which is a browser-local storage mechanism.
+    Data is never synced to Chrome Sync or any cloud service.
+    Uninstalling the extension will permanently delete all stored task data.
+  </p>
+
+  <h2>Third Parties</h2>
+  <p>QuickTodo does not use any third-party services, APIs, or libraries.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>If this policy is updated, the new version will be published with an updated date on this page.</p>
+
+  <h2>Contact</h2>
+  <p>If you have any questions about this privacy policy, please open an issue on the extension's support page.</p>
+</body>
+</html>

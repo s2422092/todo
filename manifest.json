@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "QuickTodo",
+  "name": "QuickTodo - Always-on Task Reminder",
   "version": "1.0.0",
-  "description": "シンプルで使いやすいTodoリスト。最優先タスクを常に表示。",
+  "description": "A minimal todo list that keeps your top task visible at the bottom of every page. No account needed. All data stored locally.",
   "permissions": [
     "storage",
     "commands"
@@ -10,6 +10,9 @@
   "host_permissions": [
     "<all_urls>"
   ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'"
+  },
   "background": {
     "service_worker": "src/background/background.js"
   },
