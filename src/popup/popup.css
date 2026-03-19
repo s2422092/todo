@@ -89,6 +89,7 @@ header h1 {
   border-bottom: 1px solid #f1f3f4;
   transition: background 0.1s;
   animation: slideIn 0.15s ease;
+  cursor: pointer;
 }
 
 @keyframes slideIn {

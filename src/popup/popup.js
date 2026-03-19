@@ -41,6 +41,12 @@ function renderTasks() {
       item.addEventListener('dragend', onDragEnd);
     }
 
+    // バー全体クリックで完了トグル（削除ボタン・ドラッグハンドル以外）
+    item.addEventListener('click', (e) => {
+      if (e.target.closest('.task-delete') || e.target.closest('.drag-handle')) return;
+      toggleTask(task.id);
+    });
+
     const handle = document.createElement('span');
     handle.className = 'drag-handle' + (task.completed ? ' hidden' : '');
     handle.innerHTML = '&#8942;&#8942;';
@@ -50,7 +56,8 @@ function renderTasks() {
     check.type = 'checkbox';
     check.className = 'task-check';
     check.checked = task.completed;
-    check.addEventListener('change', () => toggleTask(task.id));
+    check.tabIndex = -1; // バークリックで処理するのでチェックボックス自体は無効化
+    check.style.pointerEvents = 'none';
 
     const text = document.createElement('span');
     text.className = 'task-text';
