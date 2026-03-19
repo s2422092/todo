@@ -4,14 +4,12 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   width: 420px;
   height: 520px;
 }
 
 body {
-  width: 420px;
-  height: 520px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 13px;
   background: #ffffff;
@@ -209,7 +207,6 @@ body {
 /* ===== Main ===== */
 .main {
   flex: 1;
-  width: calc(420px - 148px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
