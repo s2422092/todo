@@ -100,12 +100,15 @@ async function clearCompleted() {
   renderTasks();
 }
 
-// 入力欄でEnterキー
-document.getElementById('task-input').addEventListener('keydown', async (e) => {
-  if (e.key === 'Enter') {
-    const input = e.target;
-    await addTask(input.value);
-    input.value = '';
+// 入力欄でEnterキー（IME変換中は無視）
+let isComposing = false;
+const taskInput = document.getElementById('task-input');
+taskInput.addEventListener('compositionstart', () => { isComposing = true; });
+taskInput.addEventListener('compositionend', () => { isComposing = false; });
+taskInput.addEventListener('keydown', async (e) => {
+  if (e.key === 'Enter' && !isComposing) {
+    await addTask(e.target.value);
+    e.target.value = '';
   }
 });
 
