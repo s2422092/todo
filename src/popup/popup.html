@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickTodo</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>QuickTodo</h1>
+      <span class="shortcut-hint">Alt+Shift+D で最優先完了</span>
+    </header>
+
+    <div class="input-area">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="タスクを入力してEnter..."
+        maxlength="100"
+        autofocus
+      >
+    </div>
+
+    <div id="task-list" class="task-list"></div>
+
+    <div id="empty-state" class="empty-state">
+      <p>タスクなし 🎉</p>
+    </div>
+
+    <footer>
+      <button id="clear-completed" class="btn-clear">完了済みを削除</button>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

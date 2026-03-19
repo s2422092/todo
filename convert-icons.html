@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アイコン生成ツール</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    canvas { display: none; }
+    .preview { display: flex; gap: 20px; align-items: flex-end; margin: 20px 0; }
+    .icon-wrap { text-align: center; }
+    .icon-wrap p { font-size: 12px; color: #666; margin-top: 4px; }
+    button { padding: 10px 20px; background: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; }
+    button:hover { background: #4338ca; }
+  </style>
+</head>
+<body>
+  <h2>QuickTodo アイコン生成</h2>
+  <p>「PNGを生成してダウンロード」ボタンを押すと、4サイズのアイコンが自動ダウンロードされます。</p>
+  <p>ダウンロードしたファイルを <code>assets/icons/</code> フォルダに配置してください。</p>
+  <div class="preview" id="preview"></div>
+  <button onclick="generateAll()">PNGを生成してダウンロード</button>
+
+  <script>
+    function drawIcon(canvas, size) {
+      const ctx = canvas.getContext('2d');
+      const r = size * 0.18;
+
+      // 背景
+      ctx.fillStyle = '#4f46e5';
+      roundRect(ctx, 0, 0, size, size, r);
+      ctx.fill();
+
+      // タスクアイテム（チェックボックス + バー）
+      ctx.fillStyle = 'white';
+      const items = [
+        { y: 0.28 },
+        { y: 0.46 },
+        { y: 0.64 },
+      ];
+      const barWidths = [0.38, 0.28, 0.32];
+
+      items.forEach((item, i) => {
+        // チェックボックス
+        roundRect(ctx, size * 0.2, size * item.y, size * 0.15, size * 0.15, size * 0.04);
+        ctx.fill();
+        // テキストバー
+        roundRect(ctx, size * 0.42, size * (item.y + 0.02), size * barWidths[i], size * 0.1, size * 0.03);
+        ctx.fill();
+      });
+    }
+
+    function roundRect(ctx, x, y, w, h, r) {
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.lineTo(x + w - r, y);
+      ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+      ctx.lineTo(x + w, y + h - r);
+      ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+      ctx.lineTo(x + r, y + h);
+      ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+      ctx.lineTo(x, y + r);
+      ctx.quadraticCurveTo(x, y, x + r, y);
+      ctx.closePath();
+    }
+
+    function generateAll() {
+      [16, 32, 48, 128].forEach(size => {
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        drawIcon(canvas, size);
+        const link = document.createElement('a');
+        link.download = `icon-${size}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      });
+    }
+
+    // プレビュー表示
+    [16, 32, 48, 128].forEach(size => {
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      canvas.style.display = 'block';
+      drawIcon(canvas, size);
+      const wrap = document.createElement('div');
+      wrap.className = 'icon-wrap';
+      wrap.appendChild(canvas);
+      const label = document.createElement('p');
+      label.textContent = `${size}x${size}`;
+      wrap.appendChild(label);
+      document.getElementById('preview').appendChild(wrap);
+    });
+  </script>
+</body>
+</html>

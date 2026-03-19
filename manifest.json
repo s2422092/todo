@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "QuickTodo",
+  "version": "1.0.0",
+  "description": "シンプルで使いやすいTodoリスト。最優先タスクを常に表示。",
+  "permissions": [
+    "storage",
+    "commands"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content.js"],
+      "css": ["src/content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "QuickTodo",
+    "default_icon": {
+      "16": "assets/icons/icon-16.png",
+      "32": "assets/icons/icon-32.png",
+      "48": "assets/icons/icon-48.png",
+      "128": "assets/icons/icon-128.png"
+    }
+  },
+  "commands": {
+    "complete-top-task": {
+      "suggested_key": {
+        "default": "Alt+Shift+D"
+      },
+      "description": "最優先タスクを完了にする"
+    },
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+T"
+      },
+      "description": "QuickTodoを開く"
+    }
+  },
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  }
+}
